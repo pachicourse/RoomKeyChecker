@@ -32,7 +32,7 @@ void loop() {
 }
 
 void checkKey() {
-  if(digitalRead(TILT) == HIGH) {
+  if(digitalRead(TILT) == LOW) {
     curlCmd = "curl -k -X POST -H \"Content-Type: application/json\" -d \'{\"value1\":\"部室\",\"value2\":\"開いて\"}' https://maker.ifttt.com/trigger/ooo/with/key/xxx";
   } else {
     curlCmd = "curl -k -X POST -H \"Content-Type: application/json\" -d \'{\"value1\":\"部室\",\"value2\":\"閉まって\"}' https://maker.ifttt.com/trigger/ooo/with/key/xxx";
